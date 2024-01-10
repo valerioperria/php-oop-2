@@ -1,7 +1,8 @@
 <?php
-
+require_once __DIR__ . '/Sconto.php';
 class Prodotto
 {
+    use Sconto;
     public $categoriaAnimale;
     public $tipologiaProdotto;
     public $titolo;

@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/Prodotti.php';
+require_once __DIR__ . '/Sconto.php';
 class Igene extends Prodotto
 {
+    use Sconto;
     private $zona_corpo;
 
     function __construct($_categoriaAnimale, $_titolo, $_prezzo, $_zona_corpo)
