@@ -15,4 +15,12 @@ class Prodotto
         $this->titolo = $_titolo;
         $this->prezzo = $_prezzo;
     }
+
+    public function verifica_fondi($portafoglio) {
+        if ($this->prezzo <= $portafoglio){
+            echo 'Hai completato il tuo acquisto. Saldo disponibile: ' . $portafoglio -= $this->prezzo;
+        } else {
+            throw new Exception();
+        }
+    }
 }

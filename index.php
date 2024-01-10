@@ -18,25 +18,33 @@ $albero = new Giocattolo('Gatti', 'Albero da Arrampicata', 38, 'Legno e Paglia')
 echo $croccantini->print_info();
 echo '<p>';
 // prezzo con sconto
-echo $croccantini->calcola_sconto();
+// echo $croccantini->calcola_sconto();
 
 
 echo '<p>';
 echo $piccola_casetta->print_info();
 echo '<p>';
 // prezzo con sconto
-echo $piccola_casetta->calcola_sconto();
+// echo $piccola_casetta->calcola_sconto();
 
 
 echo '<p>';
 echo $topolino_denti->print_info();
 echo '<p>';
 // prezzo con sconto
-echo $topolino_denti->calcola_sconto();
+// echo $topolino_denti->calcola_sconto();
 
 
 echo '<p>';
 echo $albero->print_info();
 echo '<p>';
 // prezzo con sconto
-echo $albero->calcola_sconto();
+// echo $albero->calcola_sconto();
+
+
+
+try {
+    echo $albero->verifica_fondi(100);
+} catch (Exception $e) {
+    echo 'Errore: Fondi Insufficenti';
+}
